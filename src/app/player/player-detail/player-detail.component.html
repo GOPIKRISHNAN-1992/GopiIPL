@@ -1,0 +1,12 @@
+<h3 class="text-center"> {{ playerDetail.name }}</h3>
+<a href="#" class="list-group-item clearfix" *ngFor="let playerEl of playerDetail.matchdetails">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">
+            {{ playerEl.matchname }}
+        </h4>
+        <p class="list-group-item-text">
+            Tipped On: <b>{{ playerEl.tippedon }}</b> | Match Result: <b>{{ playerEl.matchresult }}</b> | status:
+            <span [ngStyle]="{color: playerEl.status === 'You won' ? 'green' : (playerEl.status === 'You lost' ? 'red' : 'grey')}"><b>{{ playerEl.status }}</b></span>
+        </p>
+    </div>
+</a>
