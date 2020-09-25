@@ -3,7 +3,7 @@
         <app-player-list></app-player-list>
     </div>
     <div class="col-md-7">
-        <app-player-detail [playerDetail]="playerDetail" *ngIf="playerDetail; else infoText"></app-player-detail>
+        <app-player-detail [playerMatches]="playerMatches" *ngIf="playerMatches; else infoText"></app-player-detail>
         <ng-template #infoText>
             <h3>Please select a player</h3>
         </ng-template>

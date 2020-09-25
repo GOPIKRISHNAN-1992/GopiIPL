@@ -1,13 +1,16 @@
 <a class="list-group-item clearfix" (click)="onPlayerSelected()">
     <div class="pull-left">
         <h4 class="list-group-item-heading">
-            {{ playerItem.name }}
+            {{ playerItem.playername }} <span class="badge">{{ playerItem.points }}</span>
         </h4>
-        <p class="list-group-item-text">
-            W: {{ playerItem.won }}  |  L: {{ playerItem.lost }}  |  D: {{ playerItem.draw }}
-        </p>
+        
+        <ol class="breadcrumb">
+            <li> Win: {{ playerItem.won }} </li>
+            <li> Lose: {{ playerItem.lost }} </li>
+            <li> Draw: {{ playerItem.draw }} </li>
+        </ol>
     </div>
     <span class="pull-right">
-        <img [src]="playerItem.imagePath" [alt]="playerItem.name" class="img-responsive" style="max-height:50px">
+        <img [src]="playerItem.playerImage" [alt]="playerItem.playername" class="img-responsive" style="max-height:60px">
     </span>
 </a>

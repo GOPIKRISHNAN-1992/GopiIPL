@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Player } from '../../player.model';
+
 import { PlayerService } from '../../player.service';
+import { PlayerReport } from '../../playerreport.model';
 
 @Component({
     selector: 'app-player-item',
@@ -9,11 +10,11 @@ import { PlayerService } from '../../player.service';
 })
 
 export class PlayerItemComponent {
-    @Input() playerItem: Player;
+    @Input() playerItem: PlayerReport;
 
     constructor(private playerService: PlayerService) {}
 
     onPlayerSelected() {
-        this.playerService.updatePlayerMatchDetail(this.playerItem);
+        this.playerService.updatePlayerMatchDetails(this.playerItem.playerid);
     }
 }

@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
-import { PlayerMatch } from '../playermatch.model';
+import { PlayerReport } from '../playerreport.model';
 
 @Component({
     selector: 'app-player-list',
@@ -10,9 +10,9 @@ import { PlayerMatch } from '../playermatch.model';
 })
 
 export class PlayerListComponent {
-    players: Player[] = [];
+    playersReport: PlayerReport[] = [];
 
     constructor(private playerService: PlayerService) {
-        this.players = playerService.getPlayers();
+        this.playersReport = playerService.getPlayersReport();
     }
 }

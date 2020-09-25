@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { Player } from '../player.model';
+import { Component, Input, OnInit } from '@angular/core';
 import { PlayerService } from '../player.service';
+import { PlayerMatch } from '../playermatch.model';
 
 @Component({
     selector: 'app-player-detail',
@@ -8,8 +8,17 @@ import { PlayerService } from '../player.service';
     styleUrls: ['./player-detail.component.css']
 })
 
-export class PlayerDetailComponent {
-    @Input() playerDetail: Player;
+export class PlayerDetailComponent implements OnInit {
+    @Input() playerMatches: PlayerMatch[];
+    playerName: string;
 
+    constructor(private playerService: PlayerService) {}
+
+    ngOnInit() {
+        this.playerName = this.playerService.getPlayersReport().find(player => {
+            return player.playerid === this.playerMatches[0].playerid;
+        }).playername;
+        
+    }
     
 }
