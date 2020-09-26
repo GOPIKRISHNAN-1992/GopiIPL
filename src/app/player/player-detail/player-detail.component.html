@@ -1,11 +1,11 @@
 <h3 class="text-center"> {{ playerName }}</h3>
-<a href="#" class="list-group-item clearfix" *ngFor="let playerMatchEl of playerMatches">
+<a class="list-group-item clearfix" *ngFor="let playerMatchEl of playerMatches">
     <div class="pull-left">
         <h4 class="list-group-item-heading">
             {{ playerMatchEl.matchname }}
         </h4>
         <p class="list-group-item-text">
-            Tipped On: <b>{{ playerMatchEl.tippedon }}</b> | Match Result: <b>{{ playerMatchEl.matchresult }} Won</b> | status:
+            Tipped On: <b>{{ playerMatchEl.tippedon }}</b> | Match Result: <b *ngIf="playerMatchEl.matchresult!==''">{{ playerMatchEl.matchresult }} Won</b> | status:
             <span [ngStyle]="{color: playerMatchEl.status === 'You won' ? 'green' : (playerMatchEl.status === 'You lost' ? 'red' : 'grey')}"><b>{{ playerMatchEl.status }}</b></span>
         </p>
     </div>

@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-
 import { PlayerService } from './player.service';
-import { Player } from './player.model';
-import { PlayerMatch } from './playermatch.model';
 
 @Component({
     selector: 'app-player',
@@ -11,11 +8,5 @@ import { PlayerMatch } from './playermatch.model';
 })
 
 export class PlayerComponent {
-    playerMatches: PlayerMatch[];
-
-    constructor(private playerService: PlayerService) {
-        playerService.playerMatchEmitter.subscribe((playerMatches: PlayerMatch[]) => {
-            this.playerMatches = playerMatches;
-        })
-    }
+constructor() {}
 }

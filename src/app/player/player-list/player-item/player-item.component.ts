@@ -13,8 +13,4 @@ export class PlayerItemComponent {
     @Input() playerItem: PlayerReport;
 
     constructor(private playerService: PlayerService) {}
-
-    onPlayerSelected() {
-        this.playerService.updatePlayerMatchDetails(this.playerItem.playerid);
-    }
 }

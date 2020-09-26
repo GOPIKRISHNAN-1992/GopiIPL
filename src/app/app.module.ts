@@ -7,11 +7,10 @@ import { PlayerComponent } from './player/player.component';
 import { PlayerListComponent } from './player/player-list/player-list.component';
 import { PlayerDetailComponent } from './player/player-detail/player-detail.component';
 import { PlayerItemComponent } from './player/player-list/player-item/player-item.component';
-import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent }
-]
+
 
 @NgModule({
   declarations: [
@@ -20,11 +19,12 @@ const routes: Routes = [
     PlayerComponent,
     PlayerListComponent,
     PlayerDetailComponent,
-    PlayerItemComponent
+    PlayerItemComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

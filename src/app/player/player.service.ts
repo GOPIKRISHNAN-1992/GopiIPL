@@ -1,4 +1,3 @@
-import { EventEmitter } from '@angular/core';
 import { Match } from './match.model';
 import { Player } from './player.model';
 import { PlayerMatch } from './playermatch.model';
@@ -11,6 +10,7 @@ export class PlayerService {
             'Peter',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/PeterMerritt.png?alt=media&token=61752176-1b4b-4b26-bf9f-69163fb8bbfc',
             [
+                { matchid: 8, tippedon: 'KKR' },
                 { matchid: 7, tippedon: 'CSK' },
                 { matchid: 6, tippedon: 'KXIP' },
                 { matchid: 5, tippedon: 'KKR' },
@@ -25,6 +25,7 @@ export class PlayerService {
             'Michael',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/Michael.png?alt=media&token=3473020c-98a7-4c2c-8a40-14fc2f20ae00',
             [
+                { matchid: 8, tippedon: 'SRH' },
                 { matchid: 7, tippedon: 'DC' },
                 { matchid: 6, tippedon: 'RCB' },
                 { matchid: 5, tippedon: 'MI' },
@@ -39,6 +40,7 @@ export class PlayerService {
             'Ravi',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/ravi-shankar.png?alt=media&token=716f6009-5d04-41ef-8ecc-bfd37b6869bc',
             [
+                { matchid: 8, tippedon: 'SRH' },
                 { matchid: 7, tippedon: 'DC' },
                 { matchid: 6, tippedon: 'RCB' },
                 { matchid: 5, tippedon: 'KKR' },
@@ -53,6 +55,7 @@ export class PlayerService {
             'Bala',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/Bala-ClubOps.png?alt=media&token=8a7debb3-3428-43f0-9068-e8806eceb613',
             [
+                { matchid: 8, tippedon: 'KKR' },
                 { matchid: 7, tippedon: 'CSK' },
                 { matchid: 6, tippedon: 'RCB' },
                 { matchid: 5, tippedon: 'MI' },
@@ -67,6 +70,7 @@ export class PlayerService {
             'Guia',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/Guia2.png?alt=media&token=3c8ba5e6-58b5-4e15-bb1b-fa84228b0a88',
             [
+                { matchid: 8, tippedon: 'SRH' },
                 { matchid: 7, tippedon: 'DC' },
                 { matchid: 6, tippedon: 'RCB' },
                 { matchid: 5, tippedon: 'KKR' },
@@ -81,6 +85,7 @@ export class PlayerService {
             'Gopi',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/GOPI-CLUBOPS.png?alt=media&token=d7e665c0-edd3-40c7-8a78-42edf3c4651a',
             [
+                { matchid: 8, tippedon: 'KKR' },
                 { matchid: 7, tippedon: 'CSK' },
                 { matchid: 6, tippedon: 'KXIP' },
                 { matchid: 5, tippedon: 'MI' },
@@ -100,12 +105,11 @@ export class PlayerService {
         new Match(5, 'Match 5: KKR vs MI', 'MI'),
         new Match(6, 'Match 6: KXIP vs RCB', 'KXIP'),
         new Match(7, 'Match 7: CSK vs DC', 'DC'),
-        new Match(8, 'Match 8: KKR vs SRH', ''),
+        new Match(8, 'Match 8: KKR vs SRH', 'KKR'),
+        new Match(9, 'Match 9: RR vs KXIP', ''),
     ]
 
     private playerReports: PlayerReport[] = [];
-
-    playerMatchEmitter = new EventEmitter<PlayerMatch[]>();
 
     getPlayersReport() {
 
@@ -124,7 +128,7 @@ export class PlayerService {
                 else if (this.matches.find(match => { return match.matchid === matchtip.matchid }).wonby === "draw") {
                     draw++;
                 }
-                else {
+                else if (this.matches.find(match => { return match.matchid === matchtip.matchid }).wonby !== "") {
                     lost++;
                 }
             });
@@ -163,9 +167,11 @@ export class PlayerService {
                     match.matchname,
                     playermatchtip.tippedon,
                     match.wonby,
-                    (playermatchtip.tippedon === match.wonby ? 'You won' : (match.wonby === 'draw' ? 'match draw' : 'You lost'))));
+                    (playermatchtip.tippedon === match.wonby ? 'You won' : 
+                    (match.wonby === 'draw' ? 'match draw' : 
+                    match.wonby === '' ? '-' :'You lost'))));
         });
 
-        this.playerMatchEmitter.emit(playerMatches);
+        return playerMatches.slice();
     }
 }

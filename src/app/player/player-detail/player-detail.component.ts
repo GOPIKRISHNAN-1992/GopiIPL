@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PlayerService } from '../player.service';
 import { PlayerMatch } from '../playermatch.model';
 
+import { ActivatedRoute, Params } from '@angular/router';
+
 @Component({
     selector: 'app-player-detail',
     templateUrl: './player-detail.component.html',
@@ -9,16 +11,23 @@ import { PlayerMatch } from '../playermatch.model';
 })
 
 export class PlayerDetailComponent implements OnInit {
-    @Input() playerMatches: PlayerMatch[];
+    playerMatches: PlayerMatch[];
     playerName: string;
 
-    constructor(private playerService: PlayerService) {}
+    constructor(private playerService: PlayerService,
+        private activatedRoute: ActivatedRoute) {
+
+    }
 
     ngOnInit() {
-        this.playerName = this.playerService.getPlayersReport().find(player => {
-            return player.playerid === this.playerMatches[0].playerid;
-        }).playername;
-        
+
+        this.playerMatches = this.playerService.updatePlayerMatchDetails(+this.activatedRoute.snapshot.params['id']);
+        this.playerName = this.activatedRoute.snapshot.params['name'];
+
+        this.activatedRoute.params.subscribe((param: Params) => {
+            this.playerMatches = this.playerService.updatePlayerMatchDetails(+param['id']);
+            this.playerName = param['name'];
+        });
     }
-    
+
 }
