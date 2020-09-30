@@ -3,6 +3,6 @@ export class Player {
         public playerid: number,
         public name: string,
         public imagePath: string,
-        public matchtipdetails: { matchid: number, tippedon: string}[]
+        public matchtipdetails: { matchid: number, tippedon: string, mode: string}[]
         ) {}
 }

@@ -2,11 +2,22 @@
 <a class="list-group-item clearfix" *ngFor="let playerMatchEl of playerMatches">
     <div class="pull-left">
         <h4 class="list-group-item-heading">
-            {{ playerMatchEl.matchname }}
+            {{ playerMatchEl.matchname }} 
+            
+            
+             <div class="tooltip-container">
+
+                <span style="font-size: 15px;"
+                [className]="playerMatchEl.mode ? 'glyphicon glyphicon-cog' : ''"></span>
+
+                 <span class="tooltiptext">{{ playerMatchEl.mode }}</span>
+             </div>
         </h4>
         <p class="list-group-item-text">
-            Tipped On: <b>{{ playerMatchEl.tippedon }}</b> | Match Result: <b *ngIf="playerMatchEl.matchresult!==''">{{ playerMatchEl.matchresult }} Won</b> | status:
-            <span [ngStyle]="{color: playerMatchEl.status === 'You won' ? 'green' : (playerMatchEl.status === 'You lost' ? 'red' : 'grey')}"><b>{{ playerMatchEl.status }}</b></span>
+            Tipped On: <b>{{ playerMatchEl.tippedon }}</b> | Match Result: <b
+                *ngIf="playerMatchEl.matchresult!==''">{{ playerMatchEl.matchresult }} Won</b> | status:
+            <span
+                [ngStyle]="{color: playerMatchEl.status === 'You won' ? 'green' : (playerMatchEl.status === 'You lost' ? 'red' : 'grey')}"><b>{{ playerMatchEl.status }}</b></span>
         </p>
     </div>
 </a>

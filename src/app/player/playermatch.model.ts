@@ -5,6 +5,7 @@ export class PlayerMatch {
         public matchname: string,
         public tippedon: string,
         public matchresult: string,
-        public status: string
+        public status: string,
+        public mode: string
     ) {}
 }
