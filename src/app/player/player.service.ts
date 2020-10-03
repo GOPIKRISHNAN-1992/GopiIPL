@@ -10,6 +10,10 @@ export class PlayerService {
             'Peter',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/PeterMerritt.png?alt=media&token=61752176-1b4b-4b26-bf9f-69163fb8bbfc',
             [
+                { matchid: 16, tippedon: 'DC', mode: "" },
+                { matchid: 15, tippedon: 'RR', mode: "" },
+                { matchid: 14, tippedon: 'SRH', mode: "auto" },
+                { matchid: 13, tippedon: 'MI', mode: "auto" },
                 { matchid: 12, tippedon: 'KKR', mode: "" },
                 { matchid: 11, tippedon: 'DC', mode: "" },
                 { matchid: 10, tippedon: 'RCB', mode: "" },
@@ -29,6 +33,10 @@ export class PlayerService {
             'Michael',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/Michael.png?alt=media&token=3473020c-98a7-4c2c-8a40-14fc2f20ae00',
             [
+                { matchid: 16, tippedon: 'KKR', mode: "" },
+                { matchid: 15, tippedon: 'RCB', mode: "" },
+                { matchid: 14, tippedon: 'CSK', mode: "" },
+                { matchid: 13, tippedon: 'KXIP', mode: "" },
                 { matchid: 12, tippedon: 'RR', mode: "" },
                 { matchid: 11, tippedon: 'SRH', mode: "" },
                 { matchid: 10, tippedon: 'MI', mode: "" },
@@ -48,6 +56,10 @@ export class PlayerService {
             'Ravi',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/ravi-shankar.png?alt=media&token=716f6009-5d04-41ef-8ecc-bfd37b6869bc',
             [
+                { matchid: 16, tippedon: 'KKR', mode: "auto" },
+                { matchid: 15, tippedon: 'RR', mode: "auto" },
+                { matchid: 14, tippedon: 'CSK', mode: "" },
+                { matchid: 13, tippedon: 'MI', mode: "auto" },
                 { matchid: 12, tippedon: 'KKR', mode: "" },
                 { matchid: 11, tippedon: 'SRH', mode: "auto" },
                 { matchid: 10, tippedon: 'RCB', mode: "" },
@@ -67,7 +79,11 @@ export class PlayerService {
             'Bala',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/Bala-ClubOps.png?alt=media&token=8a7debb3-3428-43f0-9068-e8806eceb613',
             [
-                { matchid: 12, tippedon: 'RR', mode: ""},
+                { matchid: 16, tippedon: 'KKR', mode: "auto" },
+                { matchid: 15, tippedon: 'RR', mode: "auto" },
+                { matchid: 14, tippedon: 'CSK', mode: "" },
+                { matchid: 13, tippedon: 'MI', mode: "" },
+                { matchid: 12, tippedon: 'RR', mode: "" },
                 { matchid: 11, tippedon: 'DC', mode: "" },
                 { matchid: 10, tippedon: 'RCB', mode: "" },
                 { matchid: 9, tippedon: 'KXIP', mode: "" },
@@ -86,6 +102,10 @@ export class PlayerService {
             'Guia',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/Guia2.png?alt=media&token=3c8ba5e6-58b5-4e15-bb1b-fa84228b0a88',
             [
+                { matchid: 16, tippedon: 'KKR', mode: "auto" },
+                { matchid: 15, tippedon: 'RR', mode: "auto" },
+                { matchid: 14, tippedon: 'SRH', mode: "auto" },
+                { matchid: 13, tippedon: 'MI', mode: "auto" },
                 { matchid: 12, tippedon: 'KKR', mode: "auto" },
                 { matchid: 11, tippedon: 'SRH', mode: "auto" },
                 { matchid: 10, tippedon: 'MI', mode: "auto" },
@@ -95,8 +115,8 @@ export class PlayerService {
                 { matchid: 6, tippedon: 'RCB', mode: "auto" },
                 { matchid: 5, tippedon: 'KKR', mode: "" },
                 { matchid: 4, tippedon: 'CSK', mode: "auto" },
-                { matchid: 3, tippedon: 'RCB', mode: ""  },
-                { matchid: 2, tippedon: 'KXIP', mode: "auto"  },
+                { matchid: 3, tippedon: 'RCB', mode: "" },
+                { matchid: 2, tippedon: 'KXIP', mode: "auto" },
                 { matchid: 1, tippedon: 'CSK', mode: "auto" }
             ]
         ),
@@ -105,17 +125,21 @@ export class PlayerService {
             'Gopi',
             'https://firebasestorage.googleapis.com/v0/b/gopikrishipl.appspot.com/o/GOPI-CLUBOPS.png?alt=media&token=d7e665c0-edd3-40c7-8a78-42edf3c4651a',
             [
-                { matchid: 12, tippedon: 'KKR', mode: ""  },
-                { matchid: 11, tippedon: 'DC', mode: ""  },
-                { matchid: 10, tippedon: 'MI', mode: ""  },
-                { matchid: 9, tippedon: 'RR', mode: ""  },
-                { matchid: 8, tippedon: 'KKR', mode: ""  },
-                { matchid: 7, tippedon: 'CSK', mode: ""  },
-                { matchid: 6, tippedon: 'KXIP', mode: ""  },
-                { matchid: 5, tippedon: 'MI', mode: ""  },
-                { matchid: 4, tippedon: 'CSK', mode: ""  },
-                { matchid: 3, tippedon: 'SRH', mode: ""  },
-                { matchid: 2, tippedon: 'DC', mode: ""  },
+                { matchid: 16, tippedon: 'KKR', mode: "auto" },
+                { matchid: 15, tippedon: 'RR', mode: "auto" },
+                { matchid: 14, tippedon: 'CSK', mode: "" },
+                { matchid: 13, tippedon: 'MI', mode: "" },
+                { matchid: 12, tippedon: 'KKR', mode: "" },
+                { matchid: 11, tippedon: 'DC', mode: "" },
+                { matchid: 10, tippedon: 'MI', mode: "" },
+                { matchid: 9, tippedon: 'RR', mode: "" },
+                { matchid: 8, tippedon: 'KKR', mode: "" },
+                { matchid: 7, tippedon: 'CSK', mode: "" },
+                { matchid: 6, tippedon: 'KXIP', mode: "" },
+                { matchid: 5, tippedon: 'MI', mode: "" },
+                { matchid: 4, tippedon: 'CSK', mode: "" },
+                { matchid: 3, tippedon: 'SRH', mode: "" },
+                { matchid: 2, tippedon: 'DC', mode: "" },
                 { matchid: 1, tippedon: 'CSK', mode: "" }
             ]
         )
@@ -134,7 +158,12 @@ export class PlayerService {
         new Match(10, 'Match 10: RCB vs MI', 'RCB'),
         new Match(11, 'Match 11: DC vs SRH', 'SRH'),
         new Match(12, 'Match 12: RR vs KKR', 'KKR'),
-        new Match(13, 'Match 13: KXIP vs MI', ''),
+        new Match(13, 'Match 13: KXIP vs MI', 'MI'),
+        new Match(14, 'Match 14: CSK vs SRH', 'SRH'),
+        new Match(15, 'Match 15: RCB vs RR', 'RCB'),
+        new Match(16, 'Match 16: DC vs KKR', 'DC'),
+        new Match(17, 'Match 17: MI vs SRH', ''),
+        new Match(18, 'Match 18: KXIP vs CSK', ''),
     ]
 
     private playerReports: PlayerReport[] = [];
@@ -143,8 +172,8 @@ export class PlayerService {
 
         this.players.forEach(playerInfo => {
 
-            let won = 0, lost = 0, draw = 0;
-            playerInfo.matchtipdetails.forEach(matchtip => {
+            let won = 0, lost = 0, draw = 0, lastThreeWon = 0;
+            playerInfo.matchtipdetails.forEach((matchtip, index) => {
 
                 if (this.matches.find(match => {
                     return match.wonby === matchtip.tippedon
@@ -152,6 +181,12 @@ export class PlayerService {
                         match.matchid === matchtip.matchid
                 })) {
                     won++;
+
+                    if (index === 0 ||
+                        index === 1 ||
+                        index === 2) {
+                        lastThreeWon++;
+                    }
                 }
                 else if (this.matches.find(match => { return match.matchid === matchtip.matchid }).wonby === "draw") {
                     draw++;
@@ -161,7 +196,11 @@ export class PlayerService {
                 }
             });
 
+            console.log(playerInfo.name + " " + lastThreeWon);
+
             let points = (2 * won) + draw;
+
+
 
             this.playerReports.push(
                 new PlayerReport(
@@ -171,7 +210,8 @@ export class PlayerService {
                     points,
                     won,
                     lost,
-                    draw
+                    draw,
+                    lastThreeWon === 3 ? true : false
                 )
             );
 
@@ -195,9 +235,9 @@ export class PlayerService {
                     match.matchname,
                     playermatchtip.tippedon,
                     match.wonby,
-                    (playermatchtip.tippedon === match.wonby ? 'You won' : 
-                    (match.wonby === 'draw' ? 'match draw' : 
-                    match.wonby === '' ? '-' :'You lost')),
+                    (playermatchtip.tippedon === match.wonby ? 'You won' :
+                        (match.wonby === 'draw' ? 'match draw' :
+                            match.wonby === '' ? '-' : 'You lost')),
                     playermatchtip.mode));
         });
 

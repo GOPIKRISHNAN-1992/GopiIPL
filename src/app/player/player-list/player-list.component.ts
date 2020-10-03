@@ -14,5 +14,6 @@ export class PlayerListComponent {
 
     constructor(private playerService: PlayerService) {
         this.playersReport = playerService.getPlayersReport();
+        console.log(this.playersReport);
     }
 }

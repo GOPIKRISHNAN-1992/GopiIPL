@@ -1,7 +1,11 @@
-<a class="list-group-item clearfix" [routerLink]="['/players', playerItem.playerid ,playerItem.playername]">
+<a class="list-group-item clearfix" [routerLink]="['/players', playerItem.playerid ,playerItem.playername]" [routerLinkActive]="['active']">
     <div class="pull-left">
         <h4 class="list-group-item-heading">
             {{ playerItem.playername }} <span class="badge">{{ playerItem.points }}</span>
+            <span class="tooltip-container">
+                <span style="font-size: 18px; margin-left: 10px; color: red; border-color: black;" [className]="playerItem.istrendy ? 'glyphicon glyphicon-fire' : ''"></span>
+                <span class="tooltiptext">On trend</span>
+            </span>
         </h4>
         
         <ol class="breadcrumb">

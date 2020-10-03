@@ -6,7 +6,8 @@ export class PlayerReport {
         public points: number,
         public won: number,
         public lost: number,
-        public draw: number
+        public draw: number,
+        public istrendy: boolean
     ) {
 
     }

@@ -9,6 +9,7 @@ import { PlayerDetailComponent } from './player/player-detail/player-detail.comp
 import { PlayerItemComponent } from './player/player-list/player-item/player-item.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PlayerDetailStartComponent } from './player/player-detail-start/player-detail-start.component';
 
 
 
@@ -20,7 +21,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     PlayerListComponent,
     PlayerDetailComponent,
     PlayerItemComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PlayerDetailStartComponent
   ],
   imports: [
     BrowserModule,

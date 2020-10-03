@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PlayerDetailStartComponent } from './player/player-detail-start/player-detail-start.component';
 import { PlayerDetailComponent } from './player/player-detail/player-detail.component';
 import { PlayerComponent } from './player/player.component';
 
 const routes: Routes = [
-    { path: '', component: PlayerComponent, pathMatch: 'full' },
-    { path: 'players', component: PlayerComponent, children: [
+    { path: '', redirectTo: '/players', pathMatch: 'full' },
+    {
+        path: 'players', component: PlayerComponent, children: [
+            { path: '', component: PlayerDetailStartComponent },
             { path: ':id/:name', component: PlayerDetailComponent }
         ]
     },
